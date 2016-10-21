@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(-3deg, rgb(197, 203, 209), rgb(184, 217, 249))no-repeat center center fixed;
+    background-size: cover;
+}
+pre{
+	height:100%;
+	width: 100%;
+}
+
+
+#center-wrap {
+    background-color: whitesmoke;
+    width: 60em;
+    margin: 0 auto;
+}
+
+
+.form-control {
+    font-size: inherit;
+    font-weight: bold;
+    width: 8rem !important;
+}

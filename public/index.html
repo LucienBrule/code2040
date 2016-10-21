@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2040</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- include jquery unminified from the cdn incase I mess up somewhere -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- why not try out something new -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/2.1.2/async.js"></script>
+    <!-- include each step as a module because why not -->
+    <script src="./JS/step2.js"></script>
+    <script src="./JS/step3.js"></script>
+    <script src="./JS/step4.js"></script>
+    <!-- pretty colors -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.7.7/hack.css">
+    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.7.7/standard.css">
+</head>
+
+<body class="standard">
+    <div id="center-wrap">
+        <div id="intro">
+            <p> Hi, I'm <a href=" http://homepages.rpi.edu/~brulel/index.html "><i>Lucien Brulé</i></a> and this is my implementation and simultaneous write-up of the the
+                <a href="https://fellows.code2040.org ">Code 2040</a> technical assessment</p>
+        </div>
+        <div id="step1 " class="card ">
+            <div class="card-header ">
+                <h1>Step 1</h1>
+            </div>
+            <div class="card-conent ">
+                <p>well step 1 is pretty straight forward.</p>
+                <p>Here's what I did:</p>
+                <ol>
+                    <li>Opened Post man</li>
+                    <li>Set the request type to POST</li>
+                    <li>Set the body parameters
+                        <ul>
+                            <li>token: my_token</li>
+                            <li>github: my_github_url</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p> I got back "registrattion successfull"</p>
+            </div>
+        </div>
+        <div id="step2 " class="card ">
+            <div class="card-header ">
+                <h1>Step 2 </h1>
+            </div>
+            <div class="card-content ">
+                <p> So in this part the task was to just get a string, reverse that string , and send that back to the server</p>
+                <p> That's two ajax requests, which could be done with call backs. But I've had the worst of experiences with callbacks and promises in the last few weeks (just ask my partners Lucas or Garret) at Hackupstate VII and at the TVCOG cleantech hackathon. So I decided to read through the async js documentation and do this part with that. I'm not in any rush to get this done and learning new things to get cleaner/better code is always good. (especially when your code is under review 🙃 ).
+                </p>
+                <h3> The working solution:</h3>
+                <center>
+                    <span>The word is: <input type="text " class = "form-control " value = "" id = "step2_word_forward"/>,</span>
+                    <span>and reversed it's: <input type="text " class = "form-control " value = " " id = "step2_word_reversed"/>.</span>
+                    <span>Which leads to: <span id = "step2_response">nothing, yet</span>
+                    <a class="btn btn-primary btn-block " id="step2_do"> do step two</a>
+                </center>
+            </div>
+        </div>
+        <div id="step3" class="card ">
+            <div class="card-header ">
+                <h1>Step 3 </h1>
+            </div>
+            <div class="card-content ">
+                <p>
+                    <h3> The working solution:</h3></p>
+                <center>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>needle</th>
+                                <th>haystack</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <pre class="" id="step3_needle"></pre>
+                                </td>
+                                <td> <pre class="" id="step3_haystack"></pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+            </div>
+            <a class="btn btn-primary btn-block" id="step3_do">run step 3</a>
+        </div>
+        <div id="step4">
+            <div class="card-header">
+                <h1> Step 4</h1>
+            </div>
+            <div class="card-content">
+                <p>
+                    <h3> The working solution:</h3></p>
+                <a class="btn btn-primary btn-block" id="step3_do">run step 4</a>
+            </div>
+        </div>
+        <div id="step5">
+            <div class="card-header">
+                <h1> Step 5</h1>
+            </div>
+            <div class="card-content">
+                <p>
+                    <h3> The working solution:</h3></p>
+                <a class="btn btn-primary btn-block" id="step3_do">run step 5</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

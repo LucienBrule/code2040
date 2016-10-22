@@ -54,7 +54,7 @@ $(document).ready(function($) {
     }
 
     function run_step_4() {
-        $('#step5_do').html(loading_inner);
+        $('#step4_do').html(loading_inner);
 
         async.waterfall([
             get_data_from_server,
